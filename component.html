@@ -1,0 +1,39 @@
+<!-- jsx: syntax extention of java --><!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id = "root">
+    
+</div>
+<script type = "text/babel">
+    function Product(xyz) {
+        console.log(xyz);
+        return(
+            <div class="col-xl-3">
+                {/*this is a comment in react*/}
+                <img src = {xyz.path} alt="err" class = "img-fluid"/>
+                <h2>{xyz.price}</h2>
+                <p>{xyz.name}</p>
+                <p><button>Add to Cart</button></p> 
+                </div>
+        )
+        
+    } 
+    var record =(
+        <div class="container">
+            <div class="row"> 
+
+                <Product name = "product1" price = "1999" path ="https://rukminim1.flixcart.com/image/495/594/kt7jv680/shopsy-t-shirt/x/g/8/xl-skb-try-this-original-imag6hqngemxvfst.jpeg?q=50"></Product>
+                <Product name = "product2" price = "200" path ="https://rukminim1.flixcart.com/image/495/594/l09w8sw0/t-shirt/v/l/f/xl-bmrgyrn-z12-blive-original-imagc3pjxhbqwgh5.jpeg?q=50"></Product>
+                <Product name = "product3" price = "1000" path ="https://rukminim1.flixcart.com/image/495/594/l41n2q80/t-shirt/k/x/j/l-1jgrf-013-blk-jugular-original-imagff7w8tfwd2dr.jpeg?q=50"></Product>
+                <Product name = "product4" price= "1200" path = "https://rukminim1.flixcart.com/image/495/594/l1xwqkw0/t-shirt/s/f/q/s-bnvmrrn-z12-blive-original-imagded2ex4qtkny.jpeg?q=50" />
+                
+            </div>
+        </div>
+    )
+ReactDOM.render(record,document.getElementById ("root"));
+</script>
+
+

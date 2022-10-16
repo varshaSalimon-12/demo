@@ -1,0 +1,36 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id = "root"></div>
+<script>
+    setInterval(()=>{
+        var record=`
+        <div>
+            <div>
+                <h1>
+                    <span>${Math.random()}</span>
+                </h1>
+            </div>
+        </div>
+        `
+        document.getElementById("root").innerHTML=record;
+    },1000)
+</script>
+<div id="root1"></div>
+<script type="text/babel">
+    setInterval(()=>{
+        var record=(
+            <div>
+                <div>
+                    <h1>
+                        <span>{Math.random()}</span>
+                    </h1>
+                </div>
+            </div>
+        )
+    ReactDOM.render(record,document.getElementById("root1"))
+    },1000)
+    
+</script>
